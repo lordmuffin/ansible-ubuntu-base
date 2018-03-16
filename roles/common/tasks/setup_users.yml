@@ -11,6 +11,7 @@
     groups: "{{admin_groups}}"
     comment: "Imported by Ansible {{ansible_date_time.date}}"
   with_items: "{{admin_users}}"
+  become: true
 
 - name: associate user public authorized_keys
   authorized_key:
@@ -18,4 +19,5 @@
     key: "{{item.1}}"
   with_subelements:
     - "{{admin_users}}"
-    - ssh-authorized_keys
+    - ssh-authorized-keys
+  become: true

@@ -2,5 +2,5 @@
 
 - name: setup users
   include: setup_users.yml
-- name: setup motd
-  include: setup_motd.yml
+# - name: setup motd
+#   include: setup_motd.yml
