@@ -1,5 +1,6 @@
 ---
 - name: install base components
+  become: true
   apt:
     name: "{{item}}"
   with_items:
