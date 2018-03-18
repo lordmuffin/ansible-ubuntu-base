@@ -1,5 +1,5 @@
 ---
-admin_groups: sudo
+admin_groups: sudo, wheel
 admin_users:
   - name: ajackson
     ssh-authorized-keys:
